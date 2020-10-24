@@ -1,3 +1,5 @@
+![dadao](https://github.com/yes1am/dadao/workflows/dadao/badge.svg?branch=master)
+
 ## 前言
 
 本人是《与电风扇一起摇头》读者，出于兴趣收集豆瓣 [大岛](https://www.douban.com/people/auxt/) 段子动态，尚未获得授权，尝试与大岛沟通中。  

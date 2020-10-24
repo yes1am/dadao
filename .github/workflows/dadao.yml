@@ -19,8 +19,6 @@ jobs:
           node ./index.js ${{ secrets.DB_COOKIE }}
       - name: Commit files
         run: |
-          rm -rf .git
-          git init
           git config --local user.email "songjp1996@gmail.com"
           git config --local user.name "songjp"
           git add .
@@ -30,4 +28,3 @@ jobs:
         with:
           branch: master
           github_token: ${{ secrets.TOKEN }}
-          force: true

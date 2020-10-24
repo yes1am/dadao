@@ -130,6 +130,7 @@ async function generateHtml() {
 }
 
 async function main() {
+  // 清空 tmp.json
   fs.writeFileSync(filePath, '');
   fs.writeFileSync(filePath, '[', { flag: 'a'});  // 数组的 [
   await crawlPage(1);

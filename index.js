@@ -125,7 +125,11 @@ async function generateHtml() {
   sayings = sayings.concat(baseData)
   fs.writeFileSync('./base.json', JSON.stringify(sayings, null, 2))
 
-  const html = ejs.render(tmpStr, { sayings, title: '大岛' });
+  const html = ejs.render(tmpStr, {
+    sayings,
+    title: '大岛',
+    date: new Date().toLocaleString()
+  });
   fs.writeFileSync('./index.html', html);
 }
 

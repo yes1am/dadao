@@ -7,6 +7,9 @@
   <link rel="icon" type="image/x-icon" href="https://img3.doubanio.com/favicon.ico">
   <title> <%= title %> </title>
   <meta name="description" content="<%= title %>">
+  <script>
+    console.log('生成日期 <%= date %>')
+  </script>
   <style>
     * { box-sizing: border-box; }
     html, body, ul, li, h1 { margin: 0; padding: 0 }

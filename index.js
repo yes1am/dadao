@@ -11,6 +11,8 @@ const lastDate = baseData[0].time;
 
 const cookie = process.argv[2];
 
+let isLogined = true;
+
 if(!cookie) {
   console.log('没有 cookie ');
   return;
@@ -44,6 +46,14 @@ async function crawlPage(pageNum) {
     })
     const { data } = response;
     const $ = cheerio.load(data);
+
+    // 存在登录框
+    const isNotLogin = $('.login-wrap');
+    if(isNotLogin.length) {
+      isLogined = false;
+      console.log('没登录');
+      return
+    }
     const streamItems = $('.stream-items');
 
     const results = [];
@@ -128,7 +138,8 @@ async function generateHtml() {
   const html = ejs.render(tmpStr, {
     sayings,
     title: '大岛',
-    date: new Date().toLocaleString()
+    date: new Date().toLocaleString(),
+    isLogined,
   });
   fs.writeFileSync('./index.html', html);
 }

@@ -8,7 +8,8 @@
   <title> <%= title %> </title>
   <meta name="description" content="<%= title %>">
   <script>
-    console.log('生成日期 <%= date %>')
+    console.log('生成日期: <%= date %>');
+    console.log('是否已登录: <%= isLogined %>');
   </script>
   <style>
     * { box-sizing: border-box; }

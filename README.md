@@ -12,4 +12,4 @@
 ```js
 Cookie: 'dbcl2={cookie 的值}',
 ```
-将 `dbcl2={cookie 的值}` 设置到 Github Action 的 Secrets 中
+将 `dbcl2={cookie 的值}` 设置到 Github Action 的 Secrets 中, 如 `dbcl2="xxx"`
